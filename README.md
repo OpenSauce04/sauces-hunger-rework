@@ -12,7 +12,7 @@ This mod requires AppleCore and AppleSkin
 #### 3. Food is now only consumed when required to heal
 ![Player taking damage, and healing from their hunger bar](https://github.com/OpenSauce04/sauces-food-rework/blob/master/media/heal-damage.GIF?raw=true)
 
-#### 4. Having running out of hunger does not limit your movement
+#### 4. Running out of hunger does not limit your movement
 ![Player running and jumping without any hunger](https://github.com/OpenSauce04/sauces-food-rework/blob/master/media/hungry-run.GIF?raw=true)
 
 #### 5. You are only able to eat while you have no hunger points
