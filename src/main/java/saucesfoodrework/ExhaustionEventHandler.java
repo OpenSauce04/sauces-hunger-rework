@@ -11,12 +11,19 @@ import squeek.applecore.api.hunger.ExhaustionEvent;
 public class ExhaustionEventHandler {
   @SubscribeEvent
 	public void onExhaustionAddition(ExhaustionEvent.ExhaustionAddition event) {
-    
+
 		if (event.player.getFoodStats().getSaturationLevel() > 0f) { // 
       AppleCoreAPI.mutator.setHunger(event.player, 20); // Allow healing, disable eating food
     } else {
       AppleCoreAPI.mutator.setHunger(event.player, 17); // Just enough to not allow natural health recovery
+      AppleCoreAPI.mutator.setExhaustion(event.player, 0);
     }
 
   }
+
+  @SubscribeEvent
+	public void onExhaustionAddition(ExhaustionEvent.ExhaustingAction event) {
+    event.deltaExhaustion = 0f;
+  }
+  
 }
