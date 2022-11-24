@@ -1,14 +1,14 @@
 [
 {
-  "modid": "minecraftbyexample",
-  "name": "Minecraft By Example",
-  "description": "Minecraft By Example",
-  "version": "1.12.2a",
+  "modid": "saucesfoodrework",
+  "name": "Sauce's Food Rework",
+  "description": "Changes Minecraft's food mechanics to only use saturation",
+  "version": "1.0",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["TGG and others"],
-  "credits": "The Forge, MCP, and FML guys, for making it possible",
+  "authorList": ["OpenSauce"],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
