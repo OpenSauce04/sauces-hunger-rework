@@ -1,5 +1,5 @@
 # Sauce's Food Rework
-#### A food rework mod designed to bridge the gap between the old food system and the new hunger system
+#### A hunger rework mod designed to bridge the gap between the old food system and the new hunger system
 This mod requires AppleCore and AppleSkin
 <br>
 ### Key points:
