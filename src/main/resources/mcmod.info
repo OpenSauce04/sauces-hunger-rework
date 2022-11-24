@@ -9,8 +9,8 @@
   "updateUrl": "",
   "authorList": ["OpenSauce"],
   "credits": "",
-  "logoFile": "",
+  "logoFile": "assets/saucesfoodrework/logo.png",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["applecore", "appleskin"]
 }
 ]
