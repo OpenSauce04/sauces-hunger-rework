@@ -8,7 +8,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import squeek.applecore.api.AppleCoreAPI;
 import squeek.applecore.api.hunger.ExhaustionEvent;
 
-@Mod(modid = SaucesFoodRework.MODID, version = SaucesFoodRework.VERSION)
+@Mod(modid = SaucesFoodRework.MODID, version = SaucesFoodRework.VERSION, dependencies = "required-before:applecore;required-before:appleskin")
 public class SaucesFoodRework
 {
 
