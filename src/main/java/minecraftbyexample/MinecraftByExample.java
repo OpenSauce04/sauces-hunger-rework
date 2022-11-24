@@ -1,11 +1,7 @@
-package minecraftbyexample;
+package saucesfoodrework;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
-import net.minecraftforge.fml.common.SidedProxy;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /*
    Each mod has a main class which is used by Forge to interact with the mod during startup.
@@ -54,8 +50,8 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
    The initClientOnly method must be moved to a different class StartupClientOnly, which is never loaded in the DedicatedServer at all.
  */
 
-@Mod(modid = MinecraftByExample.MODID, version = MinecraftByExample.VERSION)
-public class MinecraftByExample
+@Mod(modid = SaucesFoodRework.MODID, version = SaucesFoodRework.VERSION)
+public class SaucesFoodRework
 {
   // you also need to update the modid and version in two other places as well:
   //  build.gradle file (the version, group, and archivesBaseName parameters)
@@ -63,12 +59,10 @@ public class MinecraftByExample
   public static final String MODID = "saucesfoodrework";
   public static final String VERSION = "1.0";
 
-    
-
-  /**
-   * Prepend the name with the mod ID, suitable for ResourceLocations such as textures.
-   * @param name
-   * @return eg "minecraftbyexample:myblockname"
-   */
-  public static String prependModID(String name) {return MODID + ":" + name;}
+  @SubscribeEvent
+	public void onFoodEaten(FoodEvent.FoodEaten event)
+	{
+		if (event.hungerAdded >= 1)
+			event.player.heal(1);
+	}
 }
