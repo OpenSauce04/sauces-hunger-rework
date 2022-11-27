@@ -22,7 +22,7 @@ public class ExhaustionEventHandler {
   }
 
   @SubscribeEvent
-	public void onExhaustionAddition(ExhaustionEvent.ExhaustingAction event) {
+	public void onExhaustionAction(ExhaustionEvent.ExhaustingAction event) {
     event.deltaExhaustion = 0f;
   }
   
