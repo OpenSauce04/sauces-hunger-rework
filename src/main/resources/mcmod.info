@@ -1,7 +1,7 @@
 [
 {
-  "modid": "saucesfoodrework",
-  "name": "Sauce's Food Rework",
+  "modid": "sauceshungerrework",
+  "name": "Sauce's Hunger Rework",
   "description": "Changes Minecraft's food mechanics to only use saturation",
   "version": "1.0.1",
   "mcversion": "${mcversion}",
@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["OpenSauce"],
   "credits": "",
-  "logoFile": "assets/saucesfoodrework/logo.png",
+  "logoFile": "assets/sauceshungerrework/logo.png",
   "screenshots": [],
   "dependencies": ["applecore", "appleskin"]
 }

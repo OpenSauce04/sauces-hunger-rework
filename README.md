@@ -1,4 +1,4 @@
-# Sauce's Food Rework
+# Sauce's Hunger Rework
 #### A hunger rework mod designed to bridge the gap between the old food system and the new hunger system
 This mod requires AppleCore and AppleSkin
 <br>
