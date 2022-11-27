@@ -1,6 +1,8 @@
 # Sauce's Hunger Rework
-#### A hunger rework mod designed to bridge the gap between the old food system and the new hunger system
-This mod requires AppleCore and AppleSkin
+#### A hunger rework mod designed to bridge the gap between the old hunger system and the new hunger system
+Requires AppleCore and AppleSkin
+
+This resource pack is recommended with this mod: [Melon Hunger Bar (for Sauce's Hunger Rework)](https://www.planetminecraft.com/texture-pack/melon-hunger-bar-for-sauce-s-hunger-rework/)
 <br>
 ### Key points:
 #### 1. Player actions such as running no longer reduce hunger
@@ -16,3 +18,5 @@ This mod requires AppleCore and AppleSkin
 ![Player running and jumping without any hunger](https://github.com/OpenSauce04/sauces-food-rework/blob/master/media/hungry-run.GIF?raw=true)
 
 #### 5. You are only able to eat while you have no hunger points
+
+Note: Resource packs that change the hunger bar textures will not work properly with this mod unless they were specifically made to be compatible with this mod
