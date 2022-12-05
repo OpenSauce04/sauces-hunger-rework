@@ -3,7 +3,7 @@
   "modid": "sauceshungerrework",
   "name": "Sauce's Hunger Rework",
   "description": "Changes Minecraft's food mechanics to only use saturation",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
