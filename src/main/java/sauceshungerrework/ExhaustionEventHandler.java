@@ -8,20 +8,31 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraft.entity.player.EntityPlayer;
 import squeek.applecore.api.AppleCoreAPI;
 import squeek.applecore.api.hunger.ExhaustionEvent;
+import squeek.applecore.api.hunger.HealthRegenEvent;
 
 
 public class ExhaustionEventHandler {
 
   private void HandleExhaustion(EntityPlayer player, float deltaSaturation) {
-
-    if (player.getFoodStats().getSaturationLevel() + deltaSaturation > 0f) { 
-      AppleCoreAPI.mutator.setHunger(player, 20); // Allow healing, disable eating food
+    
+    if (player.getFoodStats().getSaturationLevel() + deltaSaturation > 0f) {
+      if (SaucesHungerRework.Configs.AllowEatingWhenNotHungry == false) {
+        AppleCoreAPI.mutator.setHunger(player, 20); // Allow healing, disable eating food
+      } else {
+        AppleCoreAPI.mutator.setHunger(player, 19);
+      }
     } else {
       AppleCoreAPI.mutator.setHunger(player, 17); // Just enough to not allow natural health recovery
       AppleCoreAPI.mutator.setExhaustion(player, 0);
     }
 
   }
+
+  @SubscribeEvent
+	public void onRegenTick(HealthRegenEvent.GetRegenTickPeriod event)
+	{
+		event.regenTickPeriod = 11; // Lock regeneration rate to be independent of the underlying "hunger" value
+	}
 
   @SubscribeEvent
 	public void onExhaustionAddition(ExhaustionEvent.ExhaustionAddition event) {
