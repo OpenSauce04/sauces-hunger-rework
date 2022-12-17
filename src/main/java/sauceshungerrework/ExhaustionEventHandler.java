@@ -9,6 +9,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import squeek.applecore.api.AppleCoreAPI;
 import squeek.applecore.api.hunger.ExhaustionEvent;
 import squeek.applecore.api.hunger.HealthRegenEvent;
+import net.minecraftforge.fml.common.eventhandler.Event.Result;
 
 
 public class ExhaustionEventHandler {
@@ -28,6 +29,11 @@ public class ExhaustionEventHandler {
 
   }
 
+  @SubscribeEvent
+	public void allowSaturatedHealthRegen(HealthRegenEvent.AllowSaturatedRegen event)
+	{
+		event.setResult(Result.DENY); // Disable saturated regeneration to allow full control over regeneration rate
+	}
   @SubscribeEvent
 	public void onRegenTick(HealthRegenEvent.GetRegenTickPeriod event)
 	{
